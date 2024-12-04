@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aircrafts</title>
+</head>
+<body>
+    <h1>Aircraft List</h1>
+    <a href="{% url 'aircraft-create' %}">Create New Aircraft</a>
+    <ul>
+        {% for aircraft in aircrafts %}
+            <li>
+                <a href="{% url 'aircraft-detail' aircraft.id %}">{{ aircraft.name }}</a> - {{ aircraft.type }}
+                <a href="{% url 'aircraft-update' aircraft.id %}">Edit</a>
+                <a href="{% url 'aircraft-delete' aircraft.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

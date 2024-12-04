@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aircraft Details</title>
+</head>
+<body>
+    <h1>{{ object.name }}</h1>
+    <p>Type: {{ object.type }}</p>
+    <a href="{% url 'aircraft_update' object.id %}">Edit</a>
+    <a href="{% url 'aircraft_delete' object.id %}">Delete</a>
+    <a href="{% url 'aircraft_list' %}">Back to List</a>
+</body>
+</html>
